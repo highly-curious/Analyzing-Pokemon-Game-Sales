@@ -8,13 +8,13 @@ I have been a lifelong fan of the Pokémon franchise, but my enthusiasm has decl
 By analyzing trends in sales alongside factors like development timelines, sentiment analysis, and promotional efforts, I aim to identify the underlying causes of this shift and assess how quality perception may be influencing the franchise’s commercial trajectory.
 
 # Data Questions
-How have inflation, unemployment, and regional GDP growth influenced Pokémon game sales over time?
-How does development time, or gaps between game releases influence launch sales and long-term performance?
-Do remake releases (e.g. FireRed & LeafGreen) follow sales patterns similar to their originals, and how do modern market conditions or nostalgia affect performance?
-How does sales performance compare between Mainline RPG titles, and Spin-offs?
-What effect do external promotions (i.e. movie releases, toy lines, TV shows) have on game launch and long-tail sales?
-Is there a measurable relationship between perceived quality decline and total units sold over time?
-Can we accurately forecast sales of upcoming Pokemon games: Legends Z-A, and Codename: Gaia using historical sales data and economic factors? 
+-How have inflation, unemployment, and regional GDP growth influenced Pokémon game sales over time?
+-How does development time, or gaps between game releases influence launch sales and long-term performance?
+-Do remake releases (e.g. FireRed & LeafGreen) follow sales patterns similar to their originals, and how do modern market conditions or nostalgia affect performance?
+-How does sales performance compare between Mainline RPG titles, and Spin-offs?
+-What effect do external promotions (i.e. movie releases, toy lines, TV shows) have on game launch and long-tail sales?
+-Is there a measurable relationship between perceived quality decline and total units sold over time?
+-Can we accurately forecast sales of upcoming Pokemon games: Legends Z-A, and Codename: Gaia using historical sales data and economic factors? 
 
 
 # Minimum Viable Product (MVP)
