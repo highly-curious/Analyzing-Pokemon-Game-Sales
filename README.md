@@ -10,11 +10,17 @@ By analyzing trends in sales alongside factors like development timelines, senti
 
 # Data Questions
   -Is there a measurable relationship between perceived quality decline and total units sold over time?
+  
   -How does development time, or gaps between game releases influence launch sales and long-term performance?
+  
   -How does sales performance compare between Mainline RPG titles, upgrades, remakes, and Spin-offs?
+  
   -Do remake releases (e.g. FireRed & LeafGreen) follow sales patterns similar to their originals, and how do modern market conditions or nostalgia affect performance?
+  
   -What effect do external promotions (i.e. movie releases, TV shows) have on game sales?
+  
   -Have factors like inflation, unemployment, and regional GDP growth influenced Pokémon game sales over time?
+  
   -Can we accurately forecast sales of upcoming Pokemon games: Legends Z-A, and Codename: Gaia using historical sales data and economic factors?
 
 
