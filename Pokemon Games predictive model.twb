@@ -1,0 +1,1694 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0415.1018                               -->
+<workbook original-version='18.1' source-build='2025.1.1 (20251.25.0415.1018)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='pokemon_games.csv+ (Multiple Connections)' inline='true' name='federated.1v9su0b0al54261eshmuj0wisnbr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='pokemon_games' name='textscan.0lrga1n16cyuj2114x3051n1orjd'>
+            <connection class='textscan' directory='C:/Users/highly-curious/Documents/NewforceData/Analyzing-Pokemon-Game-Sales/jupyter notebooks' filename='pokemon_games.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='nintendo_consoles' name='textscan.1g4ejlm1wtvlnd1c4qzvt0wuxw0f'>
+            <connection class='textscan' directory='C:/Users/highly-curious/Documents/NewforceData/Analyzing-Pokemon-Game-Sales/data' filename='nintendo_consoles.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0lrga1n16cyuj2114x3051n1orjd' name='pokemon_games.csv' table='[pokemon_games#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='title' ordinal='0' />
+              <column datatype='string' name='category' ordinal='1' />
+              <column datatype='string' name='console' ordinal='2' />
+              <column datatype='string' name='publisher' ordinal='3' />
+              <column datatype='integer' name='release_year' ordinal='4' />
+              <column datatype='string' name='abbr_title' ordinal='5' />
+              <column datatype='string' name='game_url' ordinal='6' />
+              <column datatype='integer' name='game_id' ordinal='7' />
+              <column datatype='date' name='release_date' ordinal='8' />
+              <column datatype='date' name='last_update' ordinal='9' />
+              <column datatype='real' name='japan_sales' ordinal='10' />
+              <column datatype='real' name='na_sales' ordinal='11' />
+              <column datatype='real' name='europe_sales' ordinal='12' />
+              <column datatype='real' name='others_sales' ordinal='13' />
+              <column datatype='real' name='total_units' ordinal='14' />
+              <column datatype='real' name='total_shipped' ordinal='15' />
+              <column datatype='real' name='meta_score' ordinal='16' />
+              <column datatype='real' name='user_review' ordinal='17' />
+              <column datatype='integer' name='near_movie_release' ordinal='18' />
+              <column datatype='string' name='release_gap_days' ordinal='19' />
+              <column datatype='real' name='release_gap_years' ordinal='20' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1g4ejlm1wtvlnd1c4qzvt0wuxw0f' name='nintendo_consoles.csv' table='[nintendo_consoles#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='console_title' ordinal='0' />
+              <column datatype='string' name='console' ordinal='1' />
+              <column datatype='real' name='Units Sold (worldwide consolidated sales in units life-to-date {in millions})' ordinal='2' />
+              <column datatype='date' name='release_date_na' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' value='[nintendo_consoles.csv].[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' />
+          <map key='[abbr_title]' value='[pokemon_games.csv].[abbr_title]' />
+          <map key='[category]' value='[pokemon_games.csv].[category]' />
+          <map key='[console (nintendo_consoles.csv)]' value='[nintendo_consoles.csv].[console]' />
+          <map key='[console]' value='[pokemon_games.csv].[console]' />
+          <map key='[console_title]' value='[nintendo_consoles.csv].[console_title]' />
+          <map key='[europe_sales]' value='[pokemon_games.csv].[europe_sales]' />
+          <map key='[game_id]' value='[pokemon_games.csv].[game_id]' />
+          <map key='[game_url]' value='[pokemon_games.csv].[game_url]' />
+          <map key='[japan_sales]' value='[pokemon_games.csv].[japan_sales]' />
+          <map key='[last_update]' value='[pokemon_games.csv].[last_update]' />
+          <map key='[meta_score]' value='[pokemon_games.csv].[meta_score]' />
+          <map key='[na_sales]' value='[pokemon_games.csv].[na_sales]' />
+          <map key='[near_movie_release]' value='[pokemon_games.csv].[near_movie_release]' />
+          <map key='[others_sales]' value='[pokemon_games.csv].[others_sales]' />
+          <map key='[publisher]' value='[pokemon_games.csv].[publisher]' />
+          <map key='[release_date]' value='[pokemon_games.csv].[release_date]' />
+          <map key='[release_date_na]' value='[nintendo_consoles.csv].[release_date_na]' />
+          <map key='[release_gap_days]' value='[pokemon_games.csv].[release_gap_days]' />
+          <map key='[release_gap_years]' value='[pokemon_games.csv].[release_gap_years]' />
+          <map key='[release_year]' value='[pokemon_games.csv].[release_year]' />
+          <map key='[title]' value='[pokemon_games.csv].[title]' />
+          <map key='[total_shipped]' value='[pokemon_games.csv].[total_shipped]' />
+          <map key='[total_units]' value='[pokemon_games.csv].[total_units]' />
+          <map key='[user_review]' value='[pokemon_games.csv].[user_review]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[nintendo_consoles.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>console</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[console]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>console</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publisher</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[publisher]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>publisher</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>abbr_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[abbr_title]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>abbr_title</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[game_url]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>game_url</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>game_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[game_id]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>game_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_update</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[last_update]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>last_update</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>japan_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[japan_sales]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>japan_sales</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>na_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[na_sales]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>na_sales</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>europe_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[europe_sales]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>europe_sales</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>others_sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[others_sales]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>others_sales</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_units</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_units]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>total_units</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_shipped</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_shipped]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>total_shipped</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>meta_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[meta_score]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>meta_score</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_review</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[user_review]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>user_review</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>near_movie_release</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[near_movie_release]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>near_movie_release</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_gap_days</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[release_gap_days]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>release_gap_days</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_gap_years</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[release_gap_years]</local-name>
+            <parent-name>[pokemon_games.csv]</parent-name>
+            <remote-alias>release_gap_years</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>console_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[console_title]</local-name>
+            <parent-name>[nintendo_consoles.csv]</parent-name>
+            <remote-alias>console_title</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>console</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[console (nintendo_consoles.csv)]</local-name>
+            <parent-name>[nintendo_consoles.csv]</parent-name>
+            <remote-alias>console</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Units Sold (worldwide consolidated sales in units life-to-date {in millions})</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]</local-name>
+            <parent-name>[nintendo_consoles.csv]</parent-name>
+            <remote-alias>Units Sold (worldwide consolidated sales in units life-to-date {in millions})</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date_na</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date_na]</local-name>
+            <parent-name>[nintendo_consoles.csv]</parent-name>
+            <remote-alias>release_date_na</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:1]&quot;' value='Predicted Total Units' />
+          <alias key='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:5]&quot;' value='Predicted Units' />
+        </aliases>
+      </column>
+      <column caption='Predicted_Total_Units' datatype='real' name='[Calculation_466122571770118144]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MODEL_QUANTILE(&#13;&#10;  &quot;model=rl&quot;,&#13;&#10;  0.5,&#13;&#10;  SUM([total_units]),&#13;&#10;  MAX(SUM([release_gap_years]), 2),&#13;&#10;  SUM([Units Sold (worldwide consolidated sales in units life-to-date {in millions})]),&#13;&#10;  ATTR([near_movie_release]),&#13;&#10;  ATTR([category]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='console_total_units' datatype='real' name='[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' role='measure' type='quantitative' />
+      <column caption='nintendo_consoles.csv' datatype='table' name='[__tableau_internal_object_id__].[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]' role='measure' type='quantitative' />
+      <column caption='pokemon_games.csv' datatype='table' name='[__tableau_internal_object_id__].[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]' role='measure' type='quantitative' />
+      <column caption='Abbr Title' datatype='string' name='[abbr_title]' role='dimension' type='nominal' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Console (Nintendo Consoles.Csv)' datatype='string' name='[console (nintendo_consoles.csv)]' role='dimension' type='nominal' />
+      <column caption='Console' datatype='string' name='[console]' role='dimension' type='nominal' />
+      <column caption='Console Title' datatype='string' name='[console_title]' role='dimension' type='nominal' />
+      <column caption='Europe Sales' datatype='real' name='[europe_sales]' role='measure' type='quantitative' />
+      <column caption='Game Id' datatype='integer' name='[game_id]' role='dimension' type='ordinal' />
+      <column caption='Game Url' datatype='string' name='[game_url]' role='dimension' type='nominal' />
+      <column caption='Japan Sales' datatype='real' name='[japan_sales]' role='measure' type='quantitative' />
+      <column caption='Last Update' datatype='date' name='[last_update]' role='dimension' type='ordinal' />
+      <column caption='Meta Score' datatype='real' name='[meta_score]' role='measure' type='quantitative' />
+      <column caption='Na Sales' datatype='real' name='[na_sales]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Near Movie Release' datatype='integer' name='[near_movie_release]' role='dimension' type='ordinal' />
+      <column caption='Others Sales' datatype='real' name='[others_sales]' role='measure' type='quantitative' />
+      <column caption='Publisher' datatype='string' name='[publisher]' role='dimension' type='nominal' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Release Date Na' datatype='date' name='[release_date_na]' role='dimension' type='ordinal' />
+      <column caption='Release Gap Days' datatype='string' name='[release_gap_days]' role='dimension' type='nominal' />
+      <column caption='Release Gap Years' datatype='real' name='[release_gap_years]' role='measure' type='quantitative' />
+      <column caption='Release Year' datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Total Shipped' datatype='real' name='[total_shipped]' role='measure' type='quantitative' />
+      <column caption='Total Units' datatype='real' name='[total_units]' role='measure' type='quantitative' />
+      <column caption='User Review' datatype='real' name='[user_review]' role='measure' type='quantitative' />
+      <column-instance column='[abbr_title]' derivation='None' name='[none:abbr_title:nk]' pivot='key' type='nominal' />
+      <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+      <column-instance column='[total_units]' derivation='Sum' name='[sum:total_units:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk:1]' pivot='key' type='quantitative'>
+        <table-calc ordering-field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' ordering-type='Field' />
+      </column-instance>
+      <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk:3]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' />
+      </column-instance>
+      <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk:5]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Field'>
+          <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk]' />
+          <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' />
+          <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:category:nk]' />
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/HIGHLY~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1bwc7f409ekorl13wxzsz0j4r3mp.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/16/2025 06:16:41 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657' table='[Extract].[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]' type='table' />
+            <relation name='nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47' table='[Extract].[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' value='[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47].[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' />
+            <map key='[abbr_title]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[abbr_title]' />
+            <map key='[category]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[category]' />
+            <map key='[console (nintendo_consoles.csv)]' value='[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47].[console]' />
+            <map key='[console]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[console]' />
+            <map key='[console_title]' value='[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47].[console_title]' />
+            <map key='[europe_sales]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[europe_sales]' />
+            <map key='[game_id]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[game_id]' />
+            <map key='[game_url]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[game_url]' />
+            <map key='[japan_sales]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[japan_sales]' />
+            <map key='[last_update]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[last_update]' />
+            <map key='[meta_score]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[meta_score]' />
+            <map key='[na_sales]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[na_sales]' />
+            <map key='[near_movie_release]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[near_movie_release]' />
+            <map key='[others_sales]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[others_sales]' />
+            <map key='[publisher]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[publisher]' />
+            <map key='[release_date]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[release_date]' />
+            <map key='[release_date_na]' value='[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47].[release_date_na]' />
+            <map key='[release_gap_days]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[release_gap_days]' />
+            <map key='[release_gap_years]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[release_gap_years]' />
+            <map key='[release_year]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[release_year]' />
+            <map key='[title]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[title]' />
+            <map key='[total_shipped]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[total_shipped]' />
+            <map key='[total_units]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[total_units]' />
+            <map key='[user_review]' value='[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657].[user_review]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>0</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>1</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>console</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[console]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>console</remote-alias>
+              <ordinal>2</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>publisher</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[publisher]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>publisher</remote-alias>
+              <ordinal>3</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[release_year]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>release_year</remote-alias>
+              <ordinal>4</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>abbr_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[abbr_title]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>abbr_title</remote-alias>
+              <ordinal>5</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>game_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[game_url]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>game_url</remote-alias>
+              <ordinal>6</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>game_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[game_id]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>game_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>8</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>52</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_update</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_update]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>last_update</remote-alias>
+              <ordinal>9</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>japan_sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[japan_sales]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>japan_sales</remote-alias>
+              <ordinal>10</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>na_sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[na_sales]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>na_sales</remote-alias>
+              <ordinal>11</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>europe_sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[europe_sales]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>europe_sales</remote-alias>
+              <ordinal>12</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>others_sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[others_sales]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>others_sales</remote-alias>
+              <ordinal>13</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_units</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_units]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>total_units</remote-alias>
+              <ordinal>14</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_shipped</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_shipped]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>total_shipped</remote-alias>
+              <ordinal>15</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>meta_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[meta_score]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>meta_score</remote-alias>
+              <ordinal>16</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>user_review</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[user_review]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>user_review</remote-alias>
+              <ordinal>17</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>near_movie_release</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[near_movie_release]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>near_movie_release</remote-alias>
+              <ordinal>18</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_gap_days</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[release_gap_days]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>release_gap_days</remote-alias>
+              <ordinal>19</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>45</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_gap_years</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[release_gap_years]</local-name>
+              <parent-name>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</parent-name>
+              <remote-alias>release_gap_years</remote-alias>
+              <ordinal>20</ordinal>
+              <family>pokemon_games.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>45</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>console_title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[console_title]</local-name>
+              <parent-name>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</parent-name>
+              <remote-alias>console_title</remote-alias>
+              <ordinal>21</ordinal>
+              <family>nintendo_consoles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>console</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[console (nintendo_consoles.csv)]</local-name>
+              <parent-name>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</parent-name>
+              <remote-alias>console</remote-alias>
+              <ordinal>22</ordinal>
+              <family>nintendo_consoles.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Units Sold (worldwide consolidated sales in units life-to-date {in millions})</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]</local-name>
+              <parent-name>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</parent-name>
+              <remote-alias>Units Sold (worldwide consolidated sales in units life-to-date {in millions})</remote-alias>
+              <ordinal>23</ordinal>
+              <family>nintendo_consoles.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date_na</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date_na]</local-name>
+              <parent-name>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</parent-name>
+              <remote-alias>release_date_na</remote-alias>
+              <ordinal>24</ordinal>
+              <family>nintendo_consoles.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='1' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[sum:total_units:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:1]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:3]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:5]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='title' />
+        <field-sort-custom-order field='category' />
+        <field-sort-custom-order field='console' />
+        <field-sort-custom-order field='Calculation_466122571770118144' />
+        <field-sort-custom-order field='publisher' />
+        <field-sort-custom-order field='release_year' />
+        <field-sort-custom-order field='abbr_title' />
+        <field-sort-custom-order field='game_url' />
+        <field-sort-custom-order field='game_id' />
+        <field-sort-custom-order field='release_date' />
+        <field-sort-custom-order field='last_update' />
+        <field-sort-custom-order field='japan_sales' />
+        <field-sort-custom-order field='na_sales' />
+        <field-sort-custom-order field='europe_sales' />
+        <field-sort-custom-order field='others_sales' />
+        <field-sort-custom-order field='total_units' />
+        <field-sort-custom-order field='total_shipped' />
+        <field-sort-custom-order field='meta_score' />
+        <field-sort-custom-order field='user_review' />
+        <field-sort-custom-order field='near_movie_release' />
+        <field-sort-custom-order field='release_gap_days' />
+        <field-sort-custom-order field='release_gap_years' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='nintendo_consoles.csv' id='nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47'>
+            <properties context=''>
+              <relation connection='textscan.1g4ejlm1wtvlnd1c4qzvt0wuxw0f' name='nintendo_consoles.csv' table='[nintendo_consoles#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='console_title' ordinal='0' />
+                  <column datatype='string' name='console' ordinal='1' />
+                  <column datatype='real' name='Units Sold (worldwide consolidated sales in units life-to-date {in millions})' ordinal='2' />
+                  <column datatype='date' name='release_date_na' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47' table='[Extract].[nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47]' type='table' />
+            </properties>
+          </object>
+          <object caption='pokemon_games.csv' id='pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657'>
+            <properties context=''>
+              <relation connection='textscan.0lrga1n16cyuj2114x3051n1orjd' name='pokemon_games.csv' table='[pokemon_games#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='title' ordinal='0' />
+                  <column datatype='string' name='category' ordinal='1' />
+                  <column datatype='string' name='console' ordinal='2' />
+                  <column datatype='string' name='publisher' ordinal='3' />
+                  <column datatype='integer' name='release_year' ordinal='4' />
+                  <column datatype='string' name='abbr_title' ordinal='5' />
+                  <column datatype='string' name='game_url' ordinal='6' />
+                  <column datatype='integer' name='game_id' ordinal='7' />
+                  <column datatype='date' name='release_date' ordinal='8' />
+                  <column datatype='date' name='last_update' ordinal='9' />
+                  <column datatype='real' name='japan_sales' ordinal='10' />
+                  <column datatype='real' name='na_sales' ordinal='11' />
+                  <column datatype='real' name='europe_sales' ordinal='12' />
+                  <column datatype='real' name='others_sales' ordinal='13' />
+                  <column datatype='real' name='total_units' ordinal='14' />
+                  <column datatype='real' name='total_shipped' ordinal='15' />
+                  <column datatype='real' name='meta_score' ordinal='16' />
+                  <column datatype='real' name='user_review' ordinal='17' />
+                  <column datatype='integer' name='near_movie_release' ordinal='18' />
+                  <column datatype='string' name='release_gap_days' ordinal='19' />
+                  <column datatype='real' name='release_gap_years' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657' table='[Extract].[pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[console]' />
+              <expression op='[console (nintendo_consoles.csv)]' />
+            </expression>
+            <first-end-point object-id='pokemon_games.csv_6B36CF739B1E4DAFB852F0782357E657' />
+            <second-end-point object-id='nintendo_consoles.csv_3A1B951F044B46289D5931605206EE47' unique-key='true' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Predictive Model'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pokemon_games.csv+ (Multiple Connections)' name='federated.1v9su0b0al54261eshmuj0wisnbr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v9su0b0al54261eshmuj0wisnbr'>
+            <column caption='Predicted_Total_Units' datatype='real' name='[Calculation_466122571770118144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MODEL_QUANTILE(&#13;&#10;  &quot;model=rl&quot;,&#13;&#10;  0.5,&#13;&#10;  SUM([total_units]),&#13;&#10;  MAX(SUM([release_gap_years]), 2),&#13;&#10;  SUM([Units Sold (worldwide consolidated sales in units life-to-date {in millions})]),&#13;&#10;  ATTR([near_movie_release]),&#13;&#10;  ATTR([category]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='console_total_units' datatype='real' name='[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' role='measure' type='quantitative' />
+            <column caption='Abbr Title' datatype='string' name='[abbr_title]' role='dimension' type='nominal' />
+            <column-instance column='[category]' derivation='Attribute' name='[attr:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='Attribute' name='[attr:title:nk]' pivot='key' type='nominal' />
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Console' datatype='string' name='[console]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Near Movie Release' datatype='integer' name='[near_movie_release]' role='dimension' type='ordinal' />
+            <column-instance column='[abbr_title]' derivation='None' name='[none:abbr_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[console]' derivation='None' name='[none:console:nk]' pivot='key' type='nominal' />
+            <column caption='Release Gap Years' datatype='real' name='[release_gap_years]' role='measure' type='quantitative' />
+            <column-instance column='[total_units]' derivation='Sum' name='[sum:total_units:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column caption='Total Units' datatype='real' name='[total_units]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[sum:total_units:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1v9su0b0al54261eshmuj0wisnbr].[attr:category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;CORE_RPG&quot;</bucket>
+              <bucket>&quot;REMAKE&quot;</bucket>
+              <bucket>&quot;SPIN_OFF&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[attr:title:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[attr:title:nk]' />
+              <groupfilter function='member' level='[attr:title:nk]' member='&quot;Pokémon Mystery Dungeon: Rescue Team DX&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:abbr_title:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:abbr_title:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:abbr_title:nk]' member='&quot;New Snap&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:console:nk]' member='&quot;NS&quot;' />
+              <groupfilter function='member' level='[none:console:nk]' member='&quot;NS2&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]</column>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]</column>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]</column>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[attr:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' value='139' />
+            <format attr='cell-w' value='66' />
+            <format attr='cell-h' value='22' />
+            <format attr='cell' value='22' />
+            <format attr='cell-q' value='110' />
+            <format attr='height' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' value='54' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' value='104' />
+            <format attr='width' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[attr:title:nk]' value='156' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='5.7254762649536133' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1v9su0b0al54261eshmuj0wisnbr].[attr:title:nk] / ([federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk] / [federated.1v9su0b0al54261eshmuj0wisnbr].[attr:category:nk]))</rows>
+        <cols>[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{56ECF3AC-8FEE-4F13-8D25-456E6DBA35C5}' />
+    </worksheet>
+    <worksheet name='Visual Model'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pokemon_games.csv+ (Multiple Connections)' name='federated.1v9su0b0al54261eshmuj0wisnbr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v9su0b0al54261eshmuj0wisnbr'>
+            <column caption='Predicted_Total_Units' datatype='real' name='[Calculation_466122571770118144]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MODEL_QUANTILE(&#13;&#10;  &quot;model=rl&quot;,&#13;&#10;  0.5,&#13;&#10;  SUM([total_units]),&#13;&#10;  MAX(SUM([release_gap_years]), 2),&#13;&#10;  SUM([Units Sold (worldwide consolidated sales in units life-to-date {in millions})]),&#13;&#10;  ATTR([near_movie_release]),&#13;&#10;  ATTR([category]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='console_total_units' datatype='real' name='[Units Sold (worldwide consolidated sales in units life-to-date {in millions})]' role='measure' type='quantitative' />
+            <column caption='Abbr Title' datatype='string' name='[abbr_title]' role='dimension' type='nominal' />
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Console' datatype='string' name='[console]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Near Movie Release' datatype='integer' name='[near_movie_release]' role='dimension' type='ordinal' />
+            <column-instance column='[abbr_title]' derivation='None' name='[none:abbr_title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[console]' derivation='None' name='[none:console:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Release Gap Years' datatype='real' name='[release_gap_years]' role='measure' type='quantitative' />
+            <column-instance column='[total_units]' derivation='Sum' name='[sum:total_units:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column caption='Total Units' datatype='real' name='[total_units]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_466122571770118144]' derivation='User' name='[usr:Calculation_466122571770118144:qk:5]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Field'>
+                <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk]' />
+                <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]' />
+                <order field='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:category:nk]' />
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[usr:Calculation_466122571770118144:qk:5]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1v9su0b0al54261eshmuj0wisnbr].[sum:total_units:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:abbr_title:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:abbr_title:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:abbr_title:nk]' member='&quot;MD: RT DX&quot;' />
+                <groupfilter function='member' level='[none:abbr_title:nk]' member='&quot;New Snap&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:console:nk]' member='&quot;NS&quot;' />
+              <groupfilter function='member' level='[none:console:nk]' member='&quot;NS2&quot;' />
+            </groupfilter>
+          </filter>
+          <alphabetic-sort column='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk]' direction='ASC' />
+          <slices>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]</column>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]</column>
+            <column>[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]' scope='rows' value='Total Units (Millions)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' value='110' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]' value='false' />
+            <format attr='break-on-special' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1v9su0b0al54261eshmuj0wisnbr].[Multiple Values]</rows>
+        <cols>([federated.1v9su0b0al54261eshmuj0wisnbr].[none:category:nk] / ([federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk] / ([federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk] / [federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names])))</cols>
+      </table>
+      <simple-id uuid='{60EC81A5-B411-4336-8C24-17D629CC5F36}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Predictive Dashboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='pokemon_games.csv+ (Multiple Connections)' name='federated.1v9su0b0al54261eshmuj0wisnbr' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1v9su0b0al54261eshmuj0wisnbr'>
+        <column caption='Console' datatype='string' name='[console]' role='dimension' type='nominal' />
+        <column-instance column='[console]' derivation='None' name='[none:console:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98684' id='7' param='horz' type-v2='layout-flow' w='99368' x='316' y='658'>
+            <zone h='98684' id='5' type-v2='layout-basic' w='90883' x='316' y='658'>
+              <zone h='98684' id='3' name='Predictive Model' w='25098' x='316' y='658'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98684' id='13' name='Visual Model' w='65785' x='25414' y='658'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='215' h='98684' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='8485' x='91199' y='658'>
+              <zone h='21382' id='8' name='Predictive Model' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type-v2='filter' w='8485' x='91199' y='658'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='21382' id='14' name='Visual Model' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type-v2='filter' w='8485' x='91199' y='22040'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5428' id='15' name='Visual Model' pane-specification-id='0' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' type-v2='color' w='8485' x='91199' y='43422'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98684' id='18' param='vert' type-v2='layout-flow' w='99368' x='316' y='658'>
+                <zone h='21382' id='8' mode='checkdropdown' name='Predictive Model' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type-v2='filter' w='8485' x='91199' y='658'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98684' id='3' is-fixed='true' name='Predictive Model' w='25098' x='316' y='658'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='21382' id='14' mode='checkdropdown' name='Visual Model' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type-v2='filter' w='8485' x='91199' y='22040'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98684' id='13' is-fixed='true' name='Visual Model' w='65785' x='25414' y='658'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5428' id='15' name='Visual Model' pane-specification-id='0' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' type-v2='color' w='8485' x='91199' y='43422'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F8CFDD4A-1EF8-411E-A6E8-30B6DD0D5FB7}' />
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='30'>
+    <window class='dashboard' maximized='true' name='Predictive Dashboard'>
+      <viewpoints>
+        <viewpoint name='Predictive Model'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Visual Model'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{59D26871-E52D-4F36-AB66-1F0EF25F364D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Predictive Model'>
+      <cards>
+        <edge name='left'>
+          <strip size='142'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:category:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:release_year:qk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[yr:release_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E32DE179-40E5-4376-A462-51260D669104}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Visual Model'>
+      <cards>
+        <edge name='left'>
+          <strip size='142'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[:Measure Names]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:abbr_title:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:category:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:console:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:release_year:qk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[none:title:nk]</field>
+            <field>[federated.1v9su0b0al54261eshmuj0wisnbr].[yr:release_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{18DB3569-2F59-4715-985B-37E1B90DF0A7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Predictive Dashboard' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
