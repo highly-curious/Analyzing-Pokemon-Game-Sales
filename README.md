@@ -32,6 +32,8 @@ Supporting charts and graphs generated using python detailing regional performan
 
 
 # Data Sources
-VgChartz - basic game data, and regional sales information, 
-Metacritic - Aggregated Critic Reviews and User Submitted reviews.
-Serebii.net - Historical cross-promotional release data. 
+VgChartz - basic game data, and regional sales information
+
+Metacritic - Aggregated Critic Reviews and User Submitted reviews
+
+Serebii.net - Historical cross-promotional release data
